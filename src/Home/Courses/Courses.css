@@ -1,0 +1,16 @@
+.devider {
+    width: 200px;
+    margin: auto;
+}
+
+.devider span {
+    width: 75px;
+    height: 10px;
+    background: transparent;
+    border-bottom: 4px solid #ddd;
+    display: block;
+   
+}
+.def{
+    border-bottom: 4px solid #62328E !important;
+}
