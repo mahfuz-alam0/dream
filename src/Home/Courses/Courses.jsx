@@ -1,6 +1,6 @@
 import React from 'react';
 import './Courses.css';
-import { FaLaptop, FaLongArrowAltRight, FaRegClock, FaStar, FaStarHalfAlt, FaStopwatch } from "react-icons/fa";
+import { FaLaptop, FaLongArrowAltRight, FaRegClock, FaStar, FaStarHalfAlt} from "react-icons/fa";
 import img1 from '../../assests/img1.jpg';
 import img2 from '../../assests/img2.png';
 import img3 from '../../assests/img3.jpg';
@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 
 const Courses = () => {
     return (
-        <div className='max-w-[1240px] mx-auto'>
+        <div className='max-w-[1240px] mx-auto px-5 md:px-0'>
             <div className='devider flex'>
                 <span></span>
                 <span className='def'></span>
@@ -19,7 +19,7 @@ const Courses = () => {
                     <h1 className='text-4xl uppercase'>About this course</h1>
                     <p className='text-sm font-light md:text-lg'>Lifetime online support and lifetime course access. During the course and after finishing the course one doesn’t have to make any investment without the course fee.</p>
                 </div>
-                <div className='grid md:grid-cols-3 sm:gird-cols-2 grid-cols-1 gap-8'>
+                <div className='grid md:grid-cols-3 sm:gird-cols-2 grid-cols-1 gap-8 mb-10 border-b'>
                     <div className='h-[600px] shadow-xl flex flex-col justify-between'>
                         <img src={img1} alt="" />
                         <div className='px-5'>

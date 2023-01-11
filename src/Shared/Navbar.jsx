@@ -12,7 +12,7 @@ const Navbar = () => {
     }
 
     return (
-        <div className='bg-pink-800'>
+        <div className='bg-pink-800 sticky top-0'>
             <div className='max-w-[1240px] mx-auto'>
                 <div className='md:flex md:justify-between py-5 items-center uppercase font-semibold'>
                     <div className='flex items-center justify-between'>
