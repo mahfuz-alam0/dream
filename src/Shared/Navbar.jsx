@@ -1,7 +1,6 @@
 import React from 'react';
 import logo from '../assests/logo.png';
 import { FaBars, FaCartArrowDown } from "react-icons/fa";
-import Marquee from "react-fast-marquee";
 import './Navbar.css';
 
 const Navbar = () => {
@@ -19,7 +18,7 @@ const Navbar = () => {
                         <div className='md:hidden p-2 mr-2'>
                             <span className='text-slate-400 text-2xl' onClick={handle_click}><FaBars /></span>
                         </div>
-                        <img className='logo pl-4 md:p-0 w-64' src={logo} alt="" />
+                        <img className='logo pl-4 md:p-0 w-36 sm:w-64' src={logo} alt="" />
                         <div className='text-3xl text-white md:hidden pr-3'><FaCartArrowDown /></div>
                     </div>
                     <div className='hidden md:block text-sm'>

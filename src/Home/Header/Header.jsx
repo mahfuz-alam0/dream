@@ -6,7 +6,7 @@ import icon3 from '../../assests/icons/icon3.png';
 
 const Header = () => {
     return (
-        <div className='mb-10'>
+        <div className='pb-10 bg-white'>
             <div className='h-screen banner text-white flex items-center flex-col justify-center'>
                 <h1 className='text-4xl font-semibold text-center uppercase'>LET’S LEARN DIGITAL MARKETING</h1>
                 <p className='text-center uppercase my-5'>SR DREAM IT is offering professional Digital Marketing Courses with Lifetime course access & Lifetime Free online support.</p>
