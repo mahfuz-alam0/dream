@@ -2,6 +2,7 @@ import React from 'react';
 import logo from '../assests/logo.png';
 import { FaBars, FaCartArrowDown } from "react-icons/fa";
 import './Navbar.css';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     const [show, setShow] = React.useState(false);
@@ -11,7 +12,7 @@ const Navbar = () => {
     }
 
     return (
-        <div className='bg-pink-800 sticky top-0'>
+        <div className='bg-pink-800 sticky z-10 top-0'>
             <div className='max-w-[1240px] mx-auto'>
                 <div className='md:flex md:justify-between py-5 items-center uppercase font-semibold'>
                     <div className='flex items-center justify-between'>
@@ -23,24 +24,24 @@ const Navbar = () => {
                     </div>
                     <div className='hidden md:block text-sm'>
                         <ul className='flex text-bold items-center'>
-                            <li className='text-white py-2 px-4 cursor-pointer hover:opacity-50'>Home</li>
-                            <li className='text-white py-2 px-4 cursor-pointer hover:opacity-50'>About</li>
-                            <li className='text-white py-2 px-4 cursor-pointer hover:opacity-50'>Courses</li>
-                            <li className='text-white py-2 px-4 cursor-pointer hover:opacity-50'>Agency</li>
-                            <li className='text-white py-2 px-4 cursor-pointer hover:opacity-50'>Sucsess storys</li>
-                            <button className='hover:opacity-70 button text-black yellow normal-case font-normal'>Login</button>
+                            <li ><Link className='text-white py-2 px-4 cursor-pointer hover:opacity-50' to='/'>Home</Link></li>
+                            <li ><Link className='text-white py-2 px-4 cursor-pointer hover:opacity-50' to='/'>About</Link></li>
+                            <li><Link className='text-white py-2 px-4 cursor-pointer hover:opacity-50' to='/course'>Courses</Link></li>
+                            <li><Link className='text-white py-2 px-4 cursor-pointer hover:opacity-50' to='/'>Agency</Link></li>
+                            <li ><Link className='text-white py-2 px-4 cursor-pointer hover:opacity-50' to='/'>Sucsess storys</Link></li>
+                            <li className=''><Link className='hover:opacity-70 button text-black yellow normal-case font-normal' to='/'>Login</Link></li>
                             <li><div className='text-3xl text-white pl-3'><FaCartArrowDown /></div></li>
                             {/* {component} */}
                         </ul>
                     </div>
                     <div className={`${show ? 'active' : undefined} absolute z-10 bg-white navbar md:hidden w-[140px] border rounded-sm mt-8`}>
                         <ul className='z-0'>
-                            <li className='border-b border-slate-300 text-black py-2 px-4 cursor-pointer hover:bg-slate-200'>Home</li>
-                            <li className='border-b border-slate-300 text-black py-2 px-4 cursor-pointer hover:bg-slate-200'>About</li>
-                            <li className='border-b border-slate-300 text-black py-2 px-4 cursor-pointer hover:bg-slate-200'>Courses</li>
-                            <li className='border-b border-slate-300 text-black py-2 px-4 cursor-pointer hover:bg-slate-200'>Agency</li>
-                            <li className='text-black py-2 px-4 cursor-pointer hover:bg-slate-200'>Sucsess storys</li>
-                            <button className='button text-black yellow w-full'>Login</button>
+                            <li className='border-b border-slate-300 text-black py-2 px-4 cursor-pointer hover:bg-slate-200'><Link to='/'>Home</Link></li>
+                            <li className='border-b border-slate-300 text-black py-2 px-4 cursor-pointer hover:bg-slate-200'><Link to='/'>About</Link></li>
+                            <li className='border-b border-slate-300 text-black py-2 px-4 cursor-pointer hover:bg-slate-200'><Link to='/'>Courses</Link></li>
+                            <li className='border-b border-slate-300 text-black py-2 px-4 cursor-pointer hover:bg-slate-200'><Link to='/'>Agency</Link></li>
+                            <li className='text-black py-2 px-4 cursor-pointer hover:bg-slate-200'><Link to='/'>Sucsess storys</Link></li>
+                            <button className='button text-black yellow w-full'><Link to='/'>Login</Link></button>
                         </ul>
                     </div>
                 </div>

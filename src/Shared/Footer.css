@@ -5,3 +5,14 @@
 .bef_input{
     border-radius: 5px 0px 0px 5px;
 }
+@media only screen and (max-width: 768px) {
+    .bef_button{
+        width: 100%;
+        border-radius: 5px 5px 5px 5px;
+        margin-top: 10px;
+    }
+    .bef_input{
+        width: 100%;
+        border-radius: 5px 5px 5px 5px;
+    }
+  }

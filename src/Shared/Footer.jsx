@@ -15,7 +15,7 @@ const Footer = () => {
         <div className='bg-black text-white'>
             <div className='max-w-[1240px] mx-auto pt-20'>
                 <div className='grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-10 py-10 border-b border-b-slate-700'>
-                    <div>
+                    <div className='px-5 md:px-0'>
                         <img className='w-64 mb-5' src={logo} alt="" />
                         <p className='text-slate-400 text-sm'>
                             SR DREAM IT is an online-based platform of DIGITAL MARKETING Training. Our goal is to create employment by making our students skilled. For this reason, we are providing our course with lots of resources with a very reasonable course fee. We always provide our best for making our students learn and develop their working skills. If you do your best then we will be always by your side to support you to be successful.
@@ -37,26 +37,30 @@ const Footer = () => {
                             </ul>
                         </div>
                     </div>
-                    <div>
+                    <div className='px-5 md:px-0'>
                         <h2 className='text-xl mb-5 font-semibold'>Contact with Us</h2>
                         <span className='flex items-center mb-5'><FaRegEnvelope /> support@selim.com</span>
                         <h2 className='text-lg mb-3 font-semibold'>Verify Your Certificate</h2>
-                        <div>
-                            <input className='p-2 bef_input' type="email" />
-                            <input className='text-md p-2 bg-fuchsia-700 bef_button' type="submit" value='Verify' />
+                        <div className=''>
+                            <form>
+                                <input className='p-2 bef_input' placeholder='Enter your email' type="text" />
+                                <input className='text-md p-2 bg-fuchsia-700 bef_button' type="submit" value='Verify' />
+                            </form>
                         </div>
                     </div>
                 </div>
                 <div>
-                    <div className='flex justify-between items-center py-10 border-b border-b-slate-700'>
-                        <p>We Accept Payment Via</p>
-                        <img src={bkash} alt="" />
-                        <img src={rocket} alt="" />
-                        <img src={nagad} alt="" />
-                        <img src={dbbl} alt="" />
-                        <img src={visa} alt="" />
-                        <img src={mastercard} alt="" />
-                        <img src={cod} alt="" />
+                    <div className='flex items-center py-10 border-b border-b-slate-700 flex-wrap'>
+                        <p className='md:w-1/5 px-5 md:px-0'>We Accept Payment Via</p>
+                        <div className='flex md:justify-between justify-around md:w-4/5 flex-wrap'>
+                            <img className='py-2' src={bkash} alt="" />
+                            <img className='py-2' src={rocket} alt="" />
+                            <img className='py-2' src={nagad} alt="" />
+                            <img className='py-2' src={dbbl} alt="" />
+                            <img className='py-2' src={visa} alt="" />
+                            <img className='py-2' src={mastercard} alt="" />
+                            <img className='py-2' src={cod} alt="" />
+                        </div>
                     </div>
                 </div>
                 <div className='flex justify-between py-5 text-sm text-slate-400'>
