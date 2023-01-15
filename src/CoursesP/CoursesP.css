@@ -4,5 +4,6 @@
     background-size: cover;
 }
 .def_yellow{
-    color: #f1c40f;
+    /* color: #f1c40f; */
+    border-bottom: 4px solid #f1c40f !important;
 }

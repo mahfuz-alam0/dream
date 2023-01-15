@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { Children } from 'react';
 import logo from '../assests/logo.png';
 import { FaBars, FaCartArrowDown } from "react-icons/fa";
 import './Navbar.css';
 import { Link } from 'react-router-dom';
 
-const Navbar = () => {
+const Navbar = ({children}) => {
     const [show, setShow] = React.useState(false);
 
     const handle_click = () => {
@@ -23,12 +23,24 @@ const Navbar = () => {
                         <div className='text-3xl text-white md:hidden pr-3'><FaCartArrowDown /></div>
                     </div>
                     <div className='hidden md:block text-sm'>
-                        <ul className='flex text-bold items-center'>
+                        <ul className='flex text-bold items-center '>
                             <li ><Link className='text-white py-2 px-4 cursor-pointer hover:opacity-50' to='/'>Home</Link></li>
-                            <li ><Link className='text-white py-2 px-4 cursor-pointer hover:opacity-50' to='/'>About</Link></li>
+                            <li className='subMenu'>
+                                <p className='text-white py-2 px-4 cursor-pointer hover:opacity-50' to='/'>About</p>
+                                <ul class="subMenu2">
+                                    <li className='border-b border-gray-400'><Link to="/about" className='hover:pl-3 duration-500'>About us</Link></li>
+                                    <li><Link className='hover:pl-3 duration-500' to='team'>Team</Link></li>
+                                </ul>
+                            </li>
                             <li><Link className='text-white py-2 px-4 cursor-pointer hover:opacity-50' to='/course'>Courses</Link></li>
-                            <li><Link className='text-white py-2 px-4 cursor-pointer hover:opacity-50' to='/'>Agency</Link></li>
-                            <li ><Link className='text-white py-2 px-4 cursor-pointer hover:opacity-50' to='/'>Sucsess storys</Link></li>
+                            <li><Link className='text-white py-2 px-4 cursor-pointer hover:opacity-50' to='/agency'>Agency</Link></li>
+                            <li className='subMenu'>
+                                <Link className='text-white py-2 px-4 cursor-pointer hover:opacity-50' to='/'>Sucsess storys</Link>
+                                <ul class="subMenu2">
+                                    <li className='border-b border-gray-400'><Link to='freelanchers' className='hover:pl-3 duration-500'>Freelanchers</Link></li>
+                                    <li><Link to='blog' className='hover:pl-3 duration-500' >Blog</Link></li>
+                                </ul>
+                            </li>
                             <li className=''><Link className='hover:opacity-70 button text-black yellow normal-case font-normal' to='/'>Login</Link></li>
                             <li><div className='text-3xl text-white pl-3'><FaCartArrowDown /></div></li>
                             {/* {component} */}
@@ -47,7 +59,7 @@ const Navbar = () => {
                 </div>
             </div>
             <marquee className='text-white width-full'>
-                *দরিদ্র ও মেধাবী শিক্ষার্থীদের দেয়া হবে ১ লক্ষ টাকা পর্যন্ত স্কলারশীপ এবং টপ ৩ জন শিক্ষার্থী পাবেন ল্যাপটপ, পরের ৩ জন পাবেন স্মার্টফোন । বর্তমান ক্যাম্পেইনে যারা ভর্তি হচ্ছে তারাই এই সুযোগটি নিতে পারবে। তাই দেরি না করে দ্রুত ভর্তি কনফার্ম করে এই সুযোগ কাজে লাগাতে পারবেন আপনিও
+                {children}
             </marquee>
         </div >
     );
