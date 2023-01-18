@@ -41,7 +41,7 @@ const Login = () => {
                                         {errors.email && <p className='text-red-500'>{errors.email.message}</p>}
                                     </div>
                                 </div>
-                                <input className='bg-teal-500 w-full mt-4 p-2 mt-10 rounded-md font-semibold text-white' value='Login' type="submit" />
+                                <input className='bg-teal-500 w-full p-2 mt-10 rounded-md font-semibold text-white' value='Login' type="submit" />
                                 {/* {signUpError && <p className='text-red-600'>{signUpError}</p>} */}
                             </form>
                         </div>
